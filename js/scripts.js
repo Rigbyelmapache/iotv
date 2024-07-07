@@ -1,4 +1,4 @@
-document.addEventListener( function() {
+/*document.addEventListener( function() {
     var downloadButton = document.getElementById("downloadButtonAndroid");
     
     downloadButton.addEventListener("click", function() {
@@ -30,3 +30,25 @@ document.addEventListener( function() {
     });
 });
 
+*/
+document.addEventListener('DOMContentLoaded', function () {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    let currentIndex = 0;
+
+    function updateGallery() {
+        galleryItems.forEach((item, index) => {
+            item.classList.remove('gallery-item-1', 'gallery-item-2', 'gallery-item-3', 'gallery-item-4', 'gallery-item-5');
+            const newIndex = (index + currentIndex) % galleryItems.length;
+            item.classList.add(`gallery-item-${newIndex + 1}`);
+        });
+    }
+
+    function moveNext() {
+        currentIndex = (currentIndex + 1) % galleryItems.length;
+        updateGallery();
+    }
+
+    setInterval(moveNext, 3000);
+
+    updateGallery();
+});
