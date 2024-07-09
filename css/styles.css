@@ -267,7 +267,17 @@ header nav{
 .slider input:nth-child(3):checked ~ .content{
     left: -200vw;
 }
+/* descripcion-televisor */
 
+#descripcion-televisor .container {
+    text-align: center;
+    padding: 90px 5px;
+ 
+    
+   }
+#descripcion-televisor .container h2 {
+    font-size: 30px;
+}
 /* carrosel de canales */ 
 
 #gallery{
@@ -279,13 +289,21 @@ header nav{
 }
 .gallery {
     width: 100%;
+    position: relative;
+    background-color: #181717;
     
+}
+.gallery H2 {
+    text-align: center;
+    padding: 40px 0px 10px 0px;
 }
 
 .gallery-container{
-    align-items: center;
+    justify-content: center; /* Centra horizontalmente el contenido de la galería */
+    align-items: center; /* Centra verticalmente el contenido de la galería */
+    position: relative; 
     display: flex;
-    height: 400px;
+    height: 380px;
     margin: 0 auto;
     max-width: 1000px;
     position: relative;
@@ -302,12 +320,13 @@ header nav{
     border-radius: 15px;
     background-size: contain;
     overflow: hidden; 
+    background-color: white;
 }
 .gallery-item-1{
     left: 10%;
     height: 200px;
     width: 250px;
-    opacity: .4;
+    opacity: 0.4;
     transform: translateX(-50%);
 
 }
@@ -316,7 +335,7 @@ header nav{
 
     height: 220px;
     opacity: 0.8;
-    width: 250px;
+    width: 240px;
     z-index:1;
 }
 
@@ -328,10 +347,10 @@ header nav{
  .gallery-item-3{
     left: 50%;
    box-shadow: -2px 5px 33px 6px rgba(0, 0, 0, 0.35);
-    height: 250px;
+    height: 210px;
     opacity: 1;
     transform: translateX(-50%);
-    width: 280px;
+    width: 240px;
     z-index:2;
  }
 .gallery-item-4{
@@ -345,93 +364,125 @@ header nav{
     transform: translateX(-50%);
 }
 
-.gallery-controls{
+/*.gallery-controls{
   display: flex;
   justify-content: center;
   margin: 15px 0;
   height: 100px;
-}
-.gallery-controls button{
-    background-color: transparent ;
-    border: 0;
-    cursor: pointer ;
-    font-size: 30px;
-    margin: 0 50px;
-    padding: 0 12px;
-    text-transform: capitalize;
-}
-
-.gallery-controls-button:focus 
-{
-    outline: none;
-}
-
-.gallery-controls-previous {
-    position: relative;
-}
-.gallery-controls-previous::before{
-
-    border: solid black;
-    border-width: 0 5px 5px 0;
-    content: '';
-    display: inline-block;
-    height: 5px;
-    left: -30px;
-    padding: 10px;
-    position: absolute;
-    top:25%;
-    transform: rotate(135deg) translate(-50%);
-    transition: left 0.15s ease-in-out;
-    width: 5px;
-}
-.gallery-controls-previous:hover::before{
-  left:-40px
-}
-.gallery-controls-next{
-    position: relative;
-}
-
-.gallery-control-next::before
-{
-    border:solid black;
-    border-width: 0 5px 5px 0;
-    content: '';
-    display: inline-block;
-    height: 5px;
-    padding: 10px;
-    position: absolute;
-    right: -30px;
-    top:45px;
-    transform: rotate(-45deg) translateY(-50%);
-    transition: right 0.15s ease-in-out;
-    width: 5px;
-}
-.gallery-controls-next:hover:before{
-    right: -40px;
-}
-
-.gallery-nav{
-    bottom: -15px;
+}*/
+ .gallery-controls {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
+    justify-content: space-between; /* Espacia los botones en extremos opuestos */
+    align-items: center; /* Centra verticalmente los botones */
+    position: absolute; /* Posiciona los controles de manera absoluta dentro de la galería */
+    top: 65%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición para centrar exactamente */
+    width: 100%; /* Opcional: ajusta el ancho de los controles */
+    z-index: 2;
+}
+
+.gallery-control {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    pointer-events: all;
+    outline: none;
+    padding: 10px;
+}
+
+.prev {
     position: absolute;
+    left: 10px;
+}
+
+.next {
+    position: absolute;
+    right: 10px;
+}
+
+/* descripcion */ 
+
+#Descripcion {
+        
+    background-image: linear-gradient( 0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    ,url("../imagenes/person2.png");
+    background-repeat:no-repeat ;
+    background-size: cover;
+background-position: center center;
+text-align: center;
+}
+#Descripcion .container {
+    padding: 70px 0px;
+
+}
+
+#Descripcion .programas {
+    padding: 40px 0px 10px 0px;
+    display: flex; /* Agregado */
+    justify-content: center; /* Agregado */
+    flex-wrap: wrap; /* Agregado */
+    width: 100%; /* Agregado */
+    gap: 2em;
+}
+#Descripcion  .cartas {
+    
+ 
+   
+    background-color: rgba(240, 248, 255, 0.685);
+    background-position: center center;
+background-size: 10%;
+/*padding: 40px 60px;*/
+width: 250px;
+max-width: 100%;
+padding: 40px 20px;
+border-radius: 15px;
+display: flex; /* Agregado */
+flex-direction: column; 
+align-items:center; 
+
+
+
+}
+
+#Descripcion .texto  {
+    padding: 20px 0px 0px 0px;
     width: 100%;
+    height: 100%;
+    
+    
+}
+  h2 {
+    color: white;
+}
+#Descripcion .cartas .image-descrpcion {
+    background-image: 
+    url("../imagenes/store.png");
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+    background-position: center center;
+    background-size: 30%;
+    padding: 45px;
+  
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+/* margin: 5px;*/
+
+
+
+}
+ .texto h2 {
+    word-wrap: break-word; /* Asegura que las palabras largas se dividan */
+    color: #000;
 }
 
-.gallery nav li {
-    background: #ccc ;
-    border-radius: 50%;
-    height: 10px;
-    margin: 0 10px;
-    width: 10px;
+#Descripcion  p {
+   display: none;
+    flex: 1;
+   
 }
-
-.gallery-nav li.gallery-item-selected{
-    background: #555;
-}
-
 
 
 
