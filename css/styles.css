@@ -370,15 +370,16 @@ header nav{
 }
 
 .gallery-item-5{
-    left: 58%;
+    left: 65%;
     opacity: 1;
     height: 170px;
+    width: 180px;
     transform: translateX(-50%);
     z-index: 2;
   
 }
 .gallery-item-6{
-    left: 75%;
+    left: 80%;
     transform: translateX(-50%);
    
 }
@@ -386,7 +387,7 @@ header nav{
 .gallery-item-7{
     left: 90%;
     height: 150px;
-    width: 200px;
+    width: 180px;
     opacity: 0.4;
     transform: translateX(-50%);
 
