@@ -37,7 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateGallery() {
         galleryItems.forEach((item, index) => {
-            item.classList.remove('gallery-item-1', 'gallery-item-2', 'gallery-item-3', 'gallery-item-4', 'gallery-item-5');
+            item.classList.remove( 'gallery-item-1', 'gallery-item-2', 'gallery-item-3',
+                'gallery-item-4', 'gallery-item-5', 'gallery-item-6',
+                'gallery-item-7', 'gallery-item-8', 'gallery-item-9',
+                'gallery-item-10', 'gallery-item-11', 'gallery-item-12',
+                'gallery-item-13', 'gallery-item-14', 'gallery-item-15', 'gallery-item-16');
             const newIndex = (index + currentIndex) % galleryItems.length;
             item.classList.add(`gallery-item-${newIndex + 1}`);
         });
