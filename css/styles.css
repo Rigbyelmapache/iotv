@@ -226,12 +226,14 @@ header nav{
 
 .firstslide .imagen-carrosel {
     
-    background-image: linear-gradient( 0deg, rgba(255, 255, 255, 0.068), rgba(0, 0, 0, 0.5))
-    ,url("../imagenes/disney.jpg");
+    background-image: /*linear-gradient( 0deg, rgba(255, 255, 255, 0.068), rgba(0, 0, 0, 0.5))
+    ,*/url("../imagenes/logo.png  ");
     background-repeat:no-repeat ;
     background-size: cover;
-    padding: 150px;
+    padding: 100px;
    background-position: center center;
+   background-blend-mode: overlay ;
+   
 
 }
   
@@ -285,18 +287,20 @@ header nav{
     flex-direction: row;
     align-items: center;
     background-color: #ffffff;
+   
 
 }
 .gallery {
     width: 100%;
     position: relative;
-    background-color: #000000;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgb(182, 23, 23));
     padding: 50px 40px;
     
 }
 .gallery H2 {
     text-align: center;
     padding: 20px;
+    color: #ffffff;
    
 }
 
@@ -481,9 +485,12 @@ align-items:center;
 }
 
 #Descripcion .texto  {
-    padding: 20px 0px 0px 0px;
+   
     width: 100%;
-    height: 100%;
+    position: relative;
+    top: 70%;
+    /*height: 100%;*/
+    font-size: 14px;
     
     
 }
@@ -491,14 +498,13 @@ align-items:center;
     color: white;
 }
 #Descripcion .cartas .image-descrpcion {
-    background-image: 
-    url("");
+   
     background-repeat: no-repeat;
     background-color: rgb(255, 255, 255);
     background-position: center center;
-    background-size: 30%;
-    padding: 35px;
-  
+    background-size: 60%;
+    padding: 50px;
+  position: absolute;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 border-radius: 50%;
 /* margin: 5px;*/
@@ -517,6 +523,22 @@ border-radius: 50%;
    
 }
 
+.icon-1{
+    background-image: 
+    url("../imagenes/iconos/icono-1.png");
+}
+.icon-2 {
+    background-image: 
+    url("../imagenes/iconos/icono-2.png");
+}
+.icon-3{
+    background-image: 
+    url("../imagenes/iconos/icono-3.png");
+}
+.icon-4{
+    background-image: 
+    url("../imagenes/iconos/icono-2.png");
+}
 
 /* Caracteristicas */
 
@@ -530,6 +552,7 @@ border-radius: 50%;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    gap: 3em;
   
    
 }
@@ -539,8 +562,8 @@ border-radius: 50%;
     flex-direction: column; /* Asegura que los detalles estén en una columna */
     display: flex;
     padding: 10px;
-    margin-bottom: 20px;
-    gap: 1em;
+    /*margin-bottom: 20px;*/
+    gap: 2em;
 }
 #caracteristicas  h2 {
 
@@ -550,26 +573,21 @@ border-radius: 50%;
 }
 .img-caracteristicas {
     flex: 1;
-    max-width: 50%;
+    max-width: 800px;
    
 }
 #caracteristicas .img-caracteristicas {
-    background-image: url(../imagenes/descripcion.jpg);
+    background-image: url('../imagenes/variaspantallas.png');
     background-position: center center;
-    background-size: cover;
-   padding: 150px;
-    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 40em;
+   padding: 130px;
+   /* margin: 0 auto;*/
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 10px;
 }
-
-
-
-
-
-
-
 
 
 /* footer */
