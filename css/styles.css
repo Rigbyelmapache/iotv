@@ -12,6 +12,7 @@ body{
 html{
     scroll-behavior: smooth;
 }
+
 button{ 
  
     display: inline-flex;
@@ -103,6 +104,63 @@ header nav{
     font-size: 20px;
 }
 
+
+.overlay-top::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    z-index: 3; /* Asegura que el overlay esté detrás del contenido */
+    background-image: url("../imagenes/overlay-blanco-top-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+}
+
+.overlay-bottom::after {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    z-index: 3; /* Asegura que el overlay esté detrás del contenido */
+    background-image: url("../imagenes/overlay-blanco-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    left: 0;
+}
+ .overlay-top-descripcion::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 65px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../imagenes/overlay-blanco-top-1.png");
+    left: 0;
+    top: 95%;
+    
+ }
+
+ .overlay-top-footer::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 60px;
+    background-size: cover;
+    background-image: url("../imagenes/overlay-blanco-top-1.png");
+    left: 0;
+    top: -4px;
+    
+   
+}
+
+
 /*#hero{
 
     
@@ -143,7 +201,22 @@ header nav{
    
    
 }
+/* descripcion-televisor */
 
+#descripcion-televisor {
+    
+}
+#descripcion-televisor .container {
+    text-align: center;
+    padding: 90px 5px;
+    position: relative;
+    
+ 
+    
+   }
+#descripcion-televisor .container h2 {
+    font-size: 30px;
+}
 
 /*carrosel principal */
 .slider input{
@@ -269,17 +342,7 @@ header nav{
 .slider input:nth-child(3):checked ~ .content{
     left: -200vw;
 }
-/* descripcion-televisor */
 
-#descripcion-televisor .container {
-    text-align: center;
-    padding: 90px 5px;
- 
-    
-   }
-#descripcion-televisor .container h2 {
-    font-size: 30px;
-}
 /* carrosel de canales */ 
 
 #gallery{
@@ -297,6 +360,8 @@ header nav{
     padding: 50px 40px;
     
 }
+
+
 .gallery H2 {
     text-align: center;
     padding: 20px;
@@ -447,12 +512,13 @@ header nav{
     background-size: cover;
 background-position: center center;
 text-align: center;
+padding: 100px 30px;
 }
 #Descripcion .container {
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 100px 30px;
+   
 
 }
 
@@ -597,6 +663,7 @@ footer{
 .footerContainer{
     width: 100%;
     padding: 70px 30px 20px ;
+    position: relative;
 }
 .socialIcons{
     display: flex;
