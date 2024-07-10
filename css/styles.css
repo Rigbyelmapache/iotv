@@ -296,6 +296,7 @@ header nav{
 }
 .gallery H2 {
     text-align: center;
+    padding: 20px;
    
 }
 
@@ -517,10 +518,51 @@ border-radius: 50%;
 }
 
 
+/* Caracteristicas */
 
 
 
+#caracteristicas .container {
+   
+   padding: 50px 30px;
+    font-size: 20px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  
+   
+}
 
+#caracteristicas .detalles {
+  
+    flex-direction: column; /* Asegura que los detalles estén en una columna */
+    display: flex;
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 1em;
+}
+#caracteristicas  h2 {
+
+    text-align: center;
+    color: black;
+    padding: 20px;
+}
+.img-caracteristicas {
+    flex: 1;
+    max-width: 50%;
+   
+}
+#caracteristicas .img-caracteristicas {
+    background-image: url(../imagenes/descripcion.jpg);
+    background-position: center center;
+    background-size: cover;
+   padding: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
