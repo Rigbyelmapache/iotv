@@ -139,7 +139,7 @@ header nav{
     position: absolute;
     box-sizing: border-box;
     width: 100%;
-    height: 18%;
+    height: 80px;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url("../imagenes/overlay-blanco-top-1.png");
