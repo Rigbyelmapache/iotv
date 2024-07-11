@@ -56,3 +56,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateGallery();
 });
+
+
+const menu = document.querySelector(".menu>i")
+const opciones = document.querySelector(".opciones")
+
+menu.addEventListener("click", ()=> {
+    opciones.classList.toggle("show")
+    if(menu.classList.contains("bx-menu-alt-right")){
+        menu.classList.remove("bx-menu-menu-alt-right")
+    }else{
+        menu.classList.add("bx-menu-alt-right")
+    }
+
+})
